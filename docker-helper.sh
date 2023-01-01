@@ -13,5 +13,7 @@ case "$cmd" in
     "run-env") 
         echo $env && docker run --rm -e ENV_VAR=$env -p 8080:8080 pyenv-poc ;;
     "clean")
-        echo "Cleaning docker build..." && docker rmi -f pyenv-poc ;;                   
+        echo "Cleaning docker build..." && docker rmi -f pyenv-poc ;;
+    *)
+        echo "CLI options, choose from build | run | run-env | clean" ;;              
 esac
