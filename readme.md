@@ -19,6 +19,7 @@ A POC for passing an Env variable to a docker container and reading it in the ap
 ```bash
 # Step 0 - Display CLI options
 ./docker-helper.sh
+# o/p - CLI options, choose from build | run | run-env | clean
 # Step 1 - Build docker container image
 ./docker-helper.sh build
 # Step 2 - Run docker container without setting ENV_VAR
