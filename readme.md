@@ -46,6 +46,8 @@ A POC for passing an Env variable to a docker container and reading it in the ap
   ```
 - Visit http://0.0.0.0:8080/buckets
 
+> Reference [documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
 ##### Author
 
 - [Nikhil Akki](nikhilakki.in)
