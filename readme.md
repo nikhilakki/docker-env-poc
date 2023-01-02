@@ -1,6 +1,6 @@
 <!--
  Copyright (c) 2023 Nikhil Akki
- 
+
  This software is released under the MIT License.
  https://opensource.org/licenses/MIT
 -->
@@ -26,9 +26,25 @@ A POC for passing an Env variable to a docker container and reading it in the ap
 ./docker-helper.sh run
 # Step 3 - Run docker container with value passed in ENV_VAR; it is picked up from 2nd arg (value in "")
 ./docker-helper.sh run-env "this-is-coming-from-env-var"
-
 ```
+
 > Finally open http://0.0.0.0:8080/env
+
+### Run AWS CLI configuration
+
+- Create a file `.env` in the repo root and add configuration in following format
+  ```
+  AWS_ACCESS_KEY_ID=xxxx
+  AWS_SECRET_ACCESS_KEY=xxxx
+  AWS_DEFAULT_REGION=us-east-1
+  ENV_VAR=Sample-env
+  ```
+- Run
+  ```bash
+  # Run docker container with AWS CLI configuration
+  ./docker-helper.sh run-env-file
+  ```
+- Visit http://0.0.0.0:8080/buckets
 
 ##### Author
 
